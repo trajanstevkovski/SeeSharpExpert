@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.Web", "SSE.Lott
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.Web.Tests", "SSE.Lottery.Web.Tests\SSE.Lottery.Web.Tests.csproj", "{96C265D9-3A81-487D-B1D1-CF91BC617148}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.Data", "SSE.Lottery.Data\SSE.Lottery.Data.csproj", "{F7C91991-7960-43D6-8DB5-FEA8CBE16A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.Data.Model", "SSE.Lotery.Data.Model\SSE.Lottery.Data.Model.csproj", "{8494D85E-4C27-4149-9598-B8F741914582}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.Service", "SSE.Lottery.Service\SSE.Lottery.Service.csproj", "{43475439-C681-4FC5-A0E2-46050BB75396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.View.Model", "SSE.Lottery.View.Model\SSE.Lottery.View.Model.csproj", "{B83CEC38-8458-482E-B71A-BA2618B4C73C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.Mapper", "SSE.Lottery.Mapper\SSE.Lottery.Mapper.csproj", "{9CB0DC1E-CF14-4ADA-8AA3-92323AD8BC9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +31,26 @@ Global
 		{96C265D9-3A81-487D-B1D1-CF91BC617148}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96C265D9-3A81-487D-B1D1-CF91BC617148}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96C265D9-3A81-487D-B1D1-CF91BC617148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C91991-7960-43D6-8DB5-FEA8CBE16A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C91991-7960-43D6-8DB5-FEA8CBE16A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C91991-7960-43D6-8DB5-FEA8CBE16A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C91991-7960-43D6-8DB5-FEA8CBE16A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8494D85E-4C27-4149-9598-B8F741914582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8494D85E-4C27-4149-9598-B8F741914582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8494D85E-4C27-4149-9598-B8F741914582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8494D85E-4C27-4149-9598-B8F741914582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43475439-C681-4FC5-A0E2-46050BB75396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43475439-C681-4FC5-A0E2-46050BB75396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43475439-C681-4FC5-A0E2-46050BB75396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43475439-C681-4FC5-A0E2-46050BB75396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B83CEC38-8458-482E-B71A-BA2618B4C73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83CEC38-8458-482E-B71A-BA2618B4C73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83CEC38-8458-482E-B71A-BA2618B4C73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B83CEC38-8458-482E-B71A-BA2618B4C73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB0DC1E-CF14-4ADA-8AA3-92323AD8BC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB0DC1E-CF14-4ADA-8AA3-92323AD8BC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB0DC1E-CF14-4ADA-8AA3-92323AD8BC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB0DC1E-CF14-4ADA-8AA3-92323AD8BC9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
