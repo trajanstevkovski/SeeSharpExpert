@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SSE.Lottery.View.Model
+{
+    public class UserCodeModel
+    {
+        public UserCodeModel()
+        {
+            Code = new CodeModel();
+        }
+        public CodeModel Code { get; set; }
+        public string  FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+    }
+}

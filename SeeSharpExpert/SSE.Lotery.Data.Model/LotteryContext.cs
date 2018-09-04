@@ -11,7 +11,7 @@ namespace SSE.Lotery.Data.Model
     public class LotteryContext : DbContext
     {
         public LotteryContext()
-            :base("SSE.LotteryDb")
+            :base("LotteryDb")
         {
         }
 

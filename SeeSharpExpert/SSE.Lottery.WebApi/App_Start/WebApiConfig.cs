@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace SSE.Lottery.Web
+namespace SSE.Lottery.WebApi
 {
     public static class WebApiConfig
     {
