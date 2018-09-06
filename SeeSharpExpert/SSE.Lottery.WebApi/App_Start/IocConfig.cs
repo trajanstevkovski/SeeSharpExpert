@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using SSE.Lottery.Service;
+using SSE.Lottery.Service.IoC.Autofac;
 using System.Reflection;
 using System.Web.Http;
 
@@ -26,6 +27,8 @@ namespace SSE.Lottery.WebApi.App_Start
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             builder.RegisterType<LotteryManager>().As<ILotteryManager>().InstancePerRequest();
+
+            builder.RegisterModule(new ServiceModule());
 
             return builder.Build();
         }
