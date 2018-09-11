@@ -10,5 +10,6 @@ namespace SSE.Lottery.Service
     public interface ILotteryManager
     {
         AwardModel CheckCode(UserCodeModel userCode);
+        List<UserCodeAwardModel> GetAllWinners();
     }
 }

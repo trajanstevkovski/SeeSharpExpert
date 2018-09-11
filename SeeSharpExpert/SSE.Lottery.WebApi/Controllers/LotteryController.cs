@@ -23,5 +23,11 @@ namespace SSE.Lottery.WebApi.Controllers
         {
             return _loteryManager.CheckCode(userCodeModel);
         }
+
+        [HttpGet]
+        public List<UserCodeAwardModel> AllWinners()
+        {
+            return _loteryManager.GetAllWinners();
+        }
     }
 }

@@ -79,6 +79,16 @@ namespace SSE.Lottery.Service
             }
         }
 
+        public List<UserCodeAwardModel> GetAllWinners()
+        {
+            using(var uow = new UnitOfWork(_dbContext))
+            {
+                var winners = _userCodeAwardRepository.GetAll().Include(x => x.UserCode.Code).Include(x => x.Award).ToList();
+
+                return winners.Select(x => x.Map<UserCodeAward, UserCodeAwardModel>()).ToList();
+            }
+        }
+
         private Award GetRandomAward(RuffledType type)
         {
             var awards = _awardRepository.GetAll().Where(x => x.RuffledType == (byte)type).ToList();

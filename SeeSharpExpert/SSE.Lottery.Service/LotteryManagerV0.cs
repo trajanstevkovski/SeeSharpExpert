@@ -10,7 +10,7 @@ using System.Data.Entity;
 
 namespace SSE.Lottery.Service
 {
-    public class LotteryManagerV0 : ILotteryManager
+    public class LotteryManagerV0
     {
         public AwardModel CheckCode(UserCodeModel userCodeModel)
         {
