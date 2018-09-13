@@ -1,4 +1,5 @@
-﻿using SSE.Lottery.WebApi.App_Start;
+﻿using Newtonsoft.Json.Serialization;
+using SSE.Lottery.WebApi.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace SSE.Lottery.WebApi
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
             IocConfig.Initialize(GlobalConfiguration.Configuration);
+            GlobalConfiguration.Configuration
+              .Formatters
+              .JsonFormatter
+              .SerializerSettings
+              .ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
     }
 }
