@@ -22,6 +22,10 @@ export class SubmitCodeComponent implements OnInit {
   submit(){
     this.submitService.submitCode(this.userCode).subscribe((result)=> {
       console.log(result);
+      if(result == null){
+        this.toastrService.info("Try again", "Better luck next time.");
+        this.router.navigate(["/"]);
+      }
       this.toastrService.success(result.awardDescription ,"You got a REWARD");
       this.router.navigate(["/"]);
     },(error) => {
