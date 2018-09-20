@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
 })
 export class SubmitCodeService {
 
-    private url: string = "http://localhost:50438/api/Lottery/";
+    private url: string = "http://www.lottery-api.com/api/Lottery/";
 
     constructor(private httpClient: HttpClient) {
 

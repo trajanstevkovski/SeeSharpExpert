@@ -11,7 +11,7 @@ namespace SSE.Lotery.Data.Model
     public class LotteryContext : DbContext
     {
         public LotteryContext()
-            :base("LotteryDb")
+            :base("Data Source=PETRA03;Initial Catalog=LotteryDb;Integrated Security=false; User ID = lotteryLogin; Password=password5%")
         {
         }
 
