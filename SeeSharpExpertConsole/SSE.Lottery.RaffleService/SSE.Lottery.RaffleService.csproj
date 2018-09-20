@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SSE.Lottery.RaffleData.Model\SSE.Lottery.RaffleData.Model.csproj" />
+    <ProjectReference Include="..\SSE.Lottery.RaffleData\SSE.Lottery.RaffleData.csproj" />
+  </ItemGroup>
+
+</Project>

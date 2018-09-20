@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.RaffleConsole", "SSE.Lottery.RaffleConsole\SSE.Lottery.RaffleConsole.csproj", "{8757EA25-3CFD-4290-B82B-DF24AE512358}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.RaffleData.Model", "SSE.Lottery.RaffleData.Model\SSE.Lottery.RaffleData.Model.csproj", "{1F327705-4451-4A97-8C48-F78E80E4CC9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.RaffleData", "SSE.Lottery.RaffleData\SSE.Lottery.RaffleData.csproj", "{6FC1FF62-A27E-482A-B206-B8A6402FBA3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSE.Lottery.RaffleService", "SSE.Lottery.RaffleService\SSE.Lottery.RaffleService.csproj", "{23DF5660-1716-4B96-98E9-8187064F7A88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8757EA25-3CFD-4290-B82B-DF24AE512358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8757EA25-3CFD-4290-B82B-DF24AE512358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8757EA25-3CFD-4290-B82B-DF24AE512358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8757EA25-3CFD-4290-B82B-DF24AE512358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F327705-4451-4A97-8C48-F78E80E4CC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F327705-4451-4A97-8C48-F78E80E4CC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F327705-4451-4A97-8C48-F78E80E4CC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F327705-4451-4A97-8C48-F78E80E4CC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC1FF62-A27E-482A-B206-B8A6402FBA3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC1FF62-A27E-482A-B206-B8A6402FBA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC1FF62-A27E-482A-B206-B8A6402FBA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC1FF62-A27E-482A-B206-B8A6402FBA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DF5660-1716-4B96-98E9-8187064F7A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DF5660-1716-4B96-98E9-8187064F7A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DF5660-1716-4B96-98E9-8187064F7A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DF5660-1716-4B96-98E9-8187064F7A88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC096B60-7546-4439-80D4-76E82F030CB3}
+	EndGlobalSection
+EndGlobal
