@@ -7,10 +7,12 @@ namespace SSE.Lottery.RaffleData
     public class Repository<T> : IRepository<T> where T : class, IEntity
     {
         protected DbSet<T> DbSet;
+        private readonly DbContext _dbContext;
 
         public Repository(DbContext dbContext)
         {
             DbSet = dbContext.Set<T>();
+            _dbContext = dbContext;
         }
 
         public IQueryable<T> GetAll()
@@ -31,6 +33,7 @@ namespace SSE.Lottery.RaffleData
         public void Insert(T entity)
         {
             DbSet.Add(entity);
+            _dbContext.SaveChanges();
         }
     }
 }

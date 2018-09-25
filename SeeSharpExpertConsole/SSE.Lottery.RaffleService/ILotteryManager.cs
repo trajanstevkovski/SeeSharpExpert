@@ -7,6 +7,6 @@ namespace SSE.Lottery.RaffleService
 {
     public interface ILotteryManager
     {
-        void GiveAward(RaffledType type);
+        void GiveAwards(RaffledType type);
     }
 }
