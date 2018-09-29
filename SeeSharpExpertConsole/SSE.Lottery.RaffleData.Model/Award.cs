@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SSE.Lottery.RaffleData.Model
 {
-    [Table("dbo.Awards")]
+    [Table("Awards")]
     public class Award : IEntity
     {
         [Key]

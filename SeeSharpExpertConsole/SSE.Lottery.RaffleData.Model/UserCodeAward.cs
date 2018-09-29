@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SSE.Lottery.RaffleData.Model
 {
-    [Table("dbo.UserCodeAwards")]
+    [Table("UserCodeAwards")]
     public class UserCodeAward : IEntity
     {
         [Key]

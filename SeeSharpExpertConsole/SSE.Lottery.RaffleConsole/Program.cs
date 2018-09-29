@@ -1,11 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using SSE.Lottery.RaffleData;
 using SSE.Lottery.RaffleData.Model;
 using SSE.Lottery.RaffleService;
+using SSE.Lottery.Scheduler;
 using System;
 using System.IO;
+using System.Threading;
 
 namespace SSE.Lottery.RaffleConsole
 {
@@ -15,25 +18,23 @@ namespace SSE.Lottery.RaffleConsole
         {
             var serviceProvider = Configure();
             
-            var lotteryManager = serviceProvider.GetService<ILotteryManager>();
-            var configuration = serviceProvider.GetService<IConfigurationRoot>();
 
-            var finalRaffle = DateTime.Parse(configuration.GetSection("FinalRaffle").Value);
-            if(DateTime.Now.Day <= finalRaffle.Day)
+            var cronScheduler = serviceProvider.GetService<IHostedService>();
+            cronScheduler.StartAsync(new CancellationToken());
+
+            while (true)
             {
-                lotteryManager.GiveAwards(RaffledType.PerDay);
+
             }
-            if(DateTime.Now.Day == finalRaffle.Day)
-            {
-                lotteryManager.GiveAwards(RaffledType.Final);
-            }
+
+
         }
 
         static IServiceProvider Configure()
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             IConfigurationRoot configuration = builder.Build();
 
@@ -42,6 +43,7 @@ namespace SSE.Lottery.RaffleConsole
                 .AddSingleton<DbContext, LotteryContext>()
                 .AddSingleton<ILotteryManager, LotteryManager>()
                 .AddSingleton(typeof(IRepository<>), typeof(Repository<>))
+                .AddSingleton<IHostedService, ScheduleTask>()
                 .BuildServiceProvider();
 
             return serviceProvider;

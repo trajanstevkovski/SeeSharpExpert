@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SSE.Lottery.RaffleService\SSE.Lottery.RaffleService.csproj" />
+    <ProjectReference Include="..\SSE.Lottery.Scheduler\SSE.Lottery.Scheduler.csproj" />
   </ItemGroup>
 
   <ItemGroup>

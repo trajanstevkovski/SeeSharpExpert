@@ -4,6 +4,7 @@ using System.Linq;
 using SSE.Lottery.RaffleData;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace SSE.Lottery.RaffleService
 {
@@ -12,14 +13,31 @@ namespace SSE.Lottery.RaffleService
         private readonly IRepository<Award> _awardRepository;
         private readonly IRepository<UserCodeAward> _userCodeAwardRepository;
         private readonly IRepository<UserCode> _userCodeRepository;
+        private readonly IConfigurationRoot _configurationRoot;
 
         public LotteryManager(IRepository<Award> awardRepository,
             IRepository<UserCodeAward> userCodeAwardRepository,
-            IRepository<UserCode> userCodeRepository)
+            IRepository<UserCode> userCodeRepository,
+            IConfigurationRoot configurationRoot)
         {
             _userCodeAwardRepository = userCodeAwardRepository;
             _awardRepository = awardRepository;
             _userCodeRepository = userCodeRepository;
+            _configurationRoot = configurationRoot;
+        }
+
+        public void Raffle()
+        {
+            var finalRaffle = DateTime.Parse(_configurationRoot.GetSection("FinalRaffle").Value);
+
+            if (DateTime.Now.Day <= finalRaffle.Day)
+            {
+                GiveAwards(RaffledType.PerDay);
+            }
+            if (DateTime.Now.Day == finalRaffle.Day)
+            {
+                GiveAwards(RaffledType.Final);
+            }
         }
 
         public void GiveAwards(RaffledType type)
@@ -29,25 +47,6 @@ namespace SSE.Lottery.RaffleService
             {
                 GiveAward(type);
             }
-            //var awards = _awardRepository.GetAll().Where(a => a.RuffledType == (byte)type).ToList();
-            //var users = _userCodeRepository.GetAll().Include(x => x.Code).Where(u => !u.Code.IsWinning && u.SentAt.Day == DateTime.Now.Day).ToList();
-            //var usersThatMightWonAward = users.Select(i => i.Id).ToList();
-            //var rand = new Random();
-            //var awardThatNeedsToBeAwarded = awards.Sum(x => x.Quantaty);
-            //List<int> listAwardedUsers = new List<int>();
-            //for (int i = 0; i < awardThatNeedsToBeAwarded; i++)
-            //{
-            //    listAwardedUsers.Add(rand.Next(0, usersThatMightWonAward.Count - 1));
-            //}
-
-            //List<UserCodeAward> listUserAwards = new List<UserCodeAward>();
-            //listAwardedUsers.ForEach(i => listUserAwards.Add(new UserCodeAward()
-            //{
-            //    Id = users.FirstOrDefault(u => u.Id == i).Id,
-            //    UserCodeId = users.Where(u => u.Id == i).Select(c => c.CodeId).First(),
-            //    WonAt = DateTime.Now,
-            //    AwardId = GetRandomAward(RaffledType.PerDay).Id
-            //}));
         }
 
         private int GetAwardQuantityPerType(RaffledType type)
