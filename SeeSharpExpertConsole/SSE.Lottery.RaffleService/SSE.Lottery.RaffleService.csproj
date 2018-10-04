@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SSE.Lottery.RaffleData.Model\SSE.Lottery.RaffleData.Model.csproj" />
     <ProjectReference Include="..\SSE.Lottery.RaffleData\SSE.Lottery.RaffleData.csproj" />
   </ItemGroup>

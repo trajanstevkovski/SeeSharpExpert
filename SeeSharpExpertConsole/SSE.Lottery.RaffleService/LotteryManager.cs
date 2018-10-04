@@ -118,7 +118,7 @@ namespace SSE.Lottery.RaffleService
                 throw new ApplicationException("We are out of awards. Sorry!");
 
             var rnd = new Random();
-            var randomAwardIndex = rnd.Next(0, avalibleAwards.Count);
+            var randomAwardIndex = rnd.Next(0, avalibleAwards.Count - 1);
             return avalibleAwards[randomAwardIndex];
         }
     }

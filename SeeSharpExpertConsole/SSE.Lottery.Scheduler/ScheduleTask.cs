@@ -10,9 +10,13 @@ namespace SSE.Lottery.Scheduler
     public class ScheduleTask : ScheduledProcessor
     {
         private readonly ILotteryManager _lotteryManager;
+        private readonly ICodesManager _codesManager;
 
-        public ScheduleTask(IServiceScopeFactory serviceScopeFactory, ILotteryManager lotteryManager) : base(serviceScopeFactory)
+        public ScheduleTask(IServiceScopeFactory serviceScopeFactory,
+            ILotteryManager lotteryManager,
+            ICodesManager codesManager) : base(serviceScopeFactory)
         {
+            _codesManager = codesManager;
             _lotteryManager = lotteryManager;
         }
 
@@ -22,9 +26,12 @@ namespace SSE.Lottery.Scheduler
         {
             try
             {
-                Console.WriteLine($"Raffle start at: {DateTime.Now}");
-                _lotteryManager.Raffle();
-                Console.WriteLine($"Raffle finished at: {DateTime.Now}");
+                //Console.WriteLine($"Raffle start at: {DateTime.Now}");
+                //_lotteryManager.Raffle();
+                //Console.WriteLine($"Raffle finished at: {DateTime.Now}");
+                Console.WriteLine($"Codes Procesing start at: {DateTime.Now}");
+                _codesManager.ProcesCodes();
+                Console.WriteLine($"Codes Procesing ends at: {DateTime.Now}");
             }
             catch(Exception ex)
             {
